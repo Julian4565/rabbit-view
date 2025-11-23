@@ -1,6 +1,6 @@
 <script>
 	import { pb } from '$lib/store.svelte';
-	let { rabbithole } = $props();
+	let { rabbitholeId } = $props();
 	let id = $state();
 	let rabbitholes = $state([]);
 
@@ -11,7 +11,7 @@
 
 <div>
 	<label for="name">Hasenbau</label>
-	<select class="select" bind:value={id} onchange={() => rabbithole(id)}>
+	<select class="select" bind:value={id} onchange={() => rabbitholeId(id)}>
 		{#each rabbitholes as rabbithole (rabbithole.id)}
 			<option value={rabbithole.id}>{rabbithole.name}</option>
 		{/each}
