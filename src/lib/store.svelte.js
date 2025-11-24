@@ -10,7 +10,7 @@ export let store = $state({
 	listRabbits: async () => {
 		store.rabbits = await pb.collection('rabbits').getFullList();
 	},
-
+// Julian 
 	editRabbit: async (id, newName) => {
 		let editedRabbit = {
 			name: newName
